@@ -9,6 +9,9 @@
   "author": "Andrew Jordan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0"
   }
 }
