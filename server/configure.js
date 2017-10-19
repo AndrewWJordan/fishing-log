@@ -22,7 +22,7 @@ module.exports = function (app) {
     //     // }
      }).engine);
      app.set('view engine', 'hbs');
-
+     routes.initialize(app, new express.Router());
     app.use('/public/', express.static(path.join(__dirname, '../public')));
     app.use(morgan('dev'));
     if ('development' === app.get('env')) {
