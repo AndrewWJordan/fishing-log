@@ -4,6 +4,7 @@
   "description": "Node/Express will be used to pull in data from a Headless CMS.  It will then render the data within templates.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Jordan",
