@@ -4,5 +4,5 @@ This project was an attempt to utilize a Headless CMS, [Cockpit CMS](https://get
 
 1. `git clone` the repo
 2. `npm install` to install dependencies
-3. 'npm start' to start the app
+3. `npm start` to start the app
 
