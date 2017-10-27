@@ -9,7 +9,7 @@ var path = require('path'),
     errorHandler = require('errorhandler');
 
 module.exports = function (app) {
-    
+    app.use(morgan('dev'));
     //configuration 
     //setting Handlebars as the rendering engine of choice
     app.engine('hbs', hbs.create({
@@ -27,7 +27,7 @@ module.exports = function (app) {
     routes.initialize(app, new express.Router());
 
     app.use('/public/', express.static(path.join(__dirname, '../public')));
-    app.use(morgan('dev'));
+
     if ('development' === app.get('env')) {
        app.use(errorHandler());
     }

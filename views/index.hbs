@@ -1,1 +1,9 @@
 <h1>Fishing log</h1>
+{{#each story}}
+  {{this.entries.Story}}
+{{/each}}
+
+<hr/>
+{{#if error}}
+	<p>{{error}}</p>
+{{/if}}

@@ -4,7 +4,7 @@
   "description": "Node/Express will be used to pull in data from a Headless CMS.  It will then render the data within templates.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Jordan",
@@ -14,6 +14,7 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
     "request": "^2.83.0"
   }
 }
