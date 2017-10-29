@@ -1,10 +1,10 @@
-var path = require('path'),
+var express = require('express'),
+    sassMiddleware = require('node-sass-middleware'),
+    path = require('path'),
     routes = require('./routes'),
-    hbs = require('express-handlebars');
-    express = require('express'),
+    hbs = require('express-handlebars'),
     router = express.Router(),
     morgan = require('morgan'),
-    request = require('request'),
     //methodOverride = require('method-override'),
     errorHandler = require('errorhandler');
 
@@ -26,7 +26,15 @@ module.exports = function (app) {
 
     routes.initialize(app, new express.Router());
 
-    app.use('/public/', express.static(path.join(__dirname, '../public')));
+    // Adding SASS
+    app.use(sassMiddleware({
+        src: 'public',
+        dest: 'public',
+        debug: true,
+        outputStyle: 'compressed'
+    }));
+
+    app.use('/public', express.static(path.join(__dirname, '../public')));
 
     if ('development' === app.get('env')) {
        app.use(errorHandler());

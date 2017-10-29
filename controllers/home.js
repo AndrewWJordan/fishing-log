@@ -1,4 +1,5 @@
 //var LogModel = require('../models').Logs; 
+var request = require('request');
 
 module.exports = {
 	index: function (req, res) {
