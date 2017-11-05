@@ -28,7 +28,7 @@ module.exports = function (app) {
 
     // Adding SASS
     app.use(sassMiddleware({
-        src: 'public',
+        src: 'sass',
         dest: 'public',
         debug: true,
         outputStyle: 'compressed'

@@ -1,0 +1,48 @@
+$ltGrey: #AAADA7;
+$green: #264601;
+$darkGreen: #162800;
+$black: #020400;
+
+/* Header Nav Styles */
+.navbar-brand {
+	font-size: 2em;
+	font-family: 'Teko', sans-serif;
+}
+body {
+	font-family: 'Oxygen', sans-serif;
+	h1, h2, h3, h4 {
+		font-family: 'Teko', sans-serif;
+		color: $darkGreen;
+	}
+	h1 {
+		font-size: 3em;
+		line-height: 1.05em;
+	}
+	h2 {
+		font-size: 2.25em;
+		line-height: 1.25em;
+	}
+	p {
+		font-size: 1em;
+	}	
+}
+
+.navbar {
+	background: $green;
+	border-radius: 0;
+	a {
+		color: #F7F7F2;
+	}
+	.navbar-nav li a:hover {
+		background: $ltGrey;
+		color: $green
+	} 
+
+}
+.log-wrapper {
+	padding: 1.5rem;
+}
+footer {
+	height: 450px;
+	background: $ltGrey;
+}
