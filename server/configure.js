@@ -1,7 +1,7 @@
-var express = require('express'),
-    sassMiddleware = require('node-sass-middleware'),
-    path = require('path'),
+var path = require('path'),
     routes = require('./routes'),
+    express = require('express'),
+    sassMiddleware = require('node-sass-middleware'),
     hbs = require('express-handlebars'),
     router = express.Router(),
     morgan = require('morgan'),
@@ -28,7 +28,7 @@ module.exports = function (app) {
 
     // Adding SASS
     app.use(sassMiddleware({
-        src: 'sass',
+        src:  __dirname + '/../sass',
         dest: 'public',
         debug: true,
         outputStyle: 'compressed'
